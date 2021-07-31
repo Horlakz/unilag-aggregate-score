@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0.4rem;
+    line-height: 1.5;
+}
+
+option {
+    text-transform: uppercase;
+}
+
+#grade {
+    display: none;
+}

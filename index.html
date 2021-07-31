@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Calculate Your Aggregate Score</title>
+</head>
+<body>
+    <h1>Calculate your Aggregate Score</h1>
+
+    <div class="form-container">
+        <form action="">
+            <div>
+                <label for="jambscore">Jamb Score: </label>
+                <input type="number" name="Jamb Score" id="jambscore" min="200" max="400" required>
+            </div>
+
+            <div>
+                <div class="waec-result">
+                    <div id="courses">
+                        <label for="waec-result">Waec Result: </label><br>
+                        <label for="courses">Choose your course</label>
+                        <select name="course" id="course" onchange="courses(this)">
+                            <option value="mathematics">mathematics</option>
+                            <option value="chemistry">chemistry</option>
+                        </select>
+                    </div>
+
+                    <div id="grade">
+                        <div id="mathematics">
+                            <label for="maths">Mathematics</label>
+                            <select name="mathscourse" id="grade">
+                                <option value="a1">a1</option>
+                                <option value="a1">b2</option>
+                                <option value="a1">b3</option>
+                                <option value="a1">c4</option>
+                                <option value="a1">c5</option>
+                                <option value="a1">c6</option>
+                            </select>
+                        </div>
+                        <div id="english">
+                            <label for="eng">English</label>
+                            <select name="mathscourse" id="grade">
+                                <option value="a1">a1</option>
+                                <option value="a1">b2</option>
+                                <option value="a1">b3</option>
+                                <option value="a1">c4</option>
+                                <option value="a1">c5</option>
+                                <option value="a1">c6</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label for="postutme">Post Utme Score: </label>
+                <input type="number" name="postutme" id="postutme" min="12" max="30"><br>
+            </div>
+            
+            <div>
+                <input type="button" value="Calculate" id="submit" onclick="calculate()">
+            </div>
+        </form>  
+    </div>
+
+    <br>
+    <input type="submit" value="test" onclick="mathematics()">
+
+    <div class="aggregate-score">
+        <div id="displayscore"></div>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
