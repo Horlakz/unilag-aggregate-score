@@ -23,13 +23,13 @@
                         <label for="waec-result">Waec Result: </label><br>
                         <label for="courses">Choose your course</label>
                         <select name="course" id="course" onchange="courses(this)">
-                            <option value="mathematics">mathematics</option>
-                            <option value="chemistry">chemistry</option>
+                            <option value="pharmacy">Pharmacy</option>
+                            <option value="medicine">Medicine</option>
                         </select>
                     </div>
 
                     <div id="grade">
-                        <div id="mathematics">
+                        <div id="mathematicssubject">
                             <label for="maths">Mathematics</label>
                             <select name="mathscourse" id="grade">
                                 <option value="a1">a1</option>
@@ -40,7 +40,7 @@
                                 <option value="a1">c6</option>
                             </select>
                         </div>
-                        <div id="english">
+                        <div id="englishsubject">
                             <label for="eng">English</label>
                             <select name="mathscourse" id="grade">
                                 <option value="a1">a1</option>
@@ -67,7 +67,7 @@
     </div>
 
     <br>
-    <input type="submit" value="test" onclick="mathematics()">
+    <input type="submit" value="test" onclick="medicine()">
 
     <div class="aggregate-score">
         <div id="displayscore"></div>

@@ -10,17 +10,17 @@ function calculate() {
 }
 
 function courses(subjects) {
-    if (subjects.value === 'mathematics') {
-        function mathematics();
-    } else if (subjects.value === 'chemistry') {
-        function chemistry();
+    if (subjects.value === 'pharmacy') {
+        function pharmacy();
+    } else if (subjects.value === 'medicine') {
+        function medicine();
     }
 }
 
-function mathematics() {
+function pharmacy() {
     document.getElementById("grade").style.display = "inherit";
 }
 
-function chemistry() {
+function medicine() {
     document.getElementById('grade').style.display = "inherit";
 }
