@@ -9,18 +9,18 @@ function calculate() {
     document.getElementById('displayscore').innerHTML = result;
 }
 
-function courses(subjects) {
-    if (subjects.value === 'pharmacy') {
+function subject(sub) {
+    if (sub.value === 'pharmacy') {
         function pharmacy();
-    } else if (subjects.value === 'medicine') {
+    } else if (sub.value === 'medicine') {
         function medicine();
     }
 }
 
 function pharmacy() {
-    document.getElementById("grade").style.display = "inherit";
+    document.getElementById('subjects').style.display = "inherit";
 }
 
 function medicine() {
-    document.getElementById('grade').style.display = "inherit";
+    document.getElementById('subjects').style.display = "inherit";
 }

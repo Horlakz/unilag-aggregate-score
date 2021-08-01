@@ -19,37 +19,133 @@
 
             <div>
                 <div class="waec-result">
-                    <div id="courses">
-                        <label for="waec-result">Waec Result: </label><br>
+                    <div id="coursesdiv">
+                        <label for="waecresult">Waec Result: </label><br>
                         <label for="courses">Choose your course</label>
-                        <select name="course" id="course" onchange="courses(this)">
-                            <option value="pharmacy">Pharmacy</option>
-                            <option value="medicine">Medicine</option>
+                        <select name="course" id="coursesoption" onchange="subject(this)">
+                            <option value="accountancy">ACCOUNTANCY/ACCOUNTING</option>
+                            <option value="actuarial">ACTUARIAL SCIENCE</option>
+                            <option value="adulteducation">ADULT EDUCATION</option>
+                            <option value="architecture">ARCHITECTURE</option>
+                            <option value="bankingandfinance">BANKING AND FINANCE</option>
+                            <option value="biochemistry">BIOCHEMISTRY</option>
+                            <option value="biology">BIOLOGY</option>
+                            <option value="biomedicalengineering">BIOMEDICAL ENGINEERING</option>
+                            <option value="botany">BOTANY</option>
+                            <option value="building">BUILDING</option>
+                            <option value="businessadministration">BUSINESS ADMINISTRATION</option>
+                            <option value="businesseducation">BUSINESS EDUCATION</option>
+                            <option value="cellbiology">CELL BIOLOGY & GENETICS</option>
+                            <option value="chemistryengineery">CHEMICAL ENGINEERING</option>
+                            <option value="chemistry">CHEMISTRY</option>
+                            <option value="chinesestudies">CHINESE STUDIES</option>
+                            <option value="crs">CHRISTIAN RELIGIOUS STUDIES</option>
+                            <option value="civilengineering">CIVIL ENGINEERING</option>
+                            <option value="computerengineering">COMPUTER ENGINEERING</option>
+                            <option value="computerscience">COMPUTER SCIENCE</option>
+                            <option value="creativearts">CREATIVE ARTS</option>
+                            <option value="dentistryanddentalsurgery">DENTISTRY AND DENTAL SURGERY</option>
+                            <option value="earlychildhoodeducation">EARLY CHILDHOOD EDUCATION</option>
+                            <option value="economics">ECONOMICS</option>
+                            <option value="educationbiology">EDUCATION AND BIOLOGY</option>
+                            <option value="educationchemistry">EDUCATION AND CHEMISTRY</option>
+                            <option value="educationcrs">EDUCATION AND CHRISTIAN RELIGIOUS STUDIES</option>
+                            <option value="educationeconomics">EDUCATION AND ECONOMICS</option>
+                            <option value="educationenglish">EDUCATION AND ENGLISH LANGUAGE</option>
+                            <option value="educationfrench">EDUCATION AND FRENCH</option>
+                            <option value="educationgeography">EDUCATION AND GEOGRAPHY</option>
+                            <option value="educationhistory">EDUCATION AND HISTORY</option>
+                            <option value="educationigbo">EDUCATION AND IGBO</option>
+                            <option value="educationis">EDUCATION AND INTEGRATED SCIENCE</option>
+                            <option value="educationirs">EDUCATION AND ISLAMIC STUDIES</option>
+                            <option value="educationmathematics">EDUCATION AND MATHEMATICS</option>
+                            <option value="educationphysics">EDUCATION AND PHYSICS</option>
+                            <option value="educationyoruba">EDUCATION AND YORUBA</option>
+                            <option value="educationadministration">EDUCATIONAL ADMINISTRATION</option>
+                            <option value="electelect">ELECTRICAL/ELECTRONICS ENGINEERING</option>
+                            <option value="english">ENGLISH LANGUAGE</option>
+                            <option value="estatemanagement">ESTATE MANAGEMENT</option>
+                            <option value="finance">FINANCE</option>
+                            <option value="fishery">FISHERIES</option>
+                            <option value="fisherymanagement">FISHERIES MANAGEMENT</option>
+                            <option value="french">FRENCH</option>
+                            <option value="geography">GEOGRAPHY</option>
+                            <option value="geology">GEOLOGY</option>
+                            <option value="geophysics">GEOPHYSICS</option>
+                            <option value="guidanceandcounselling">GUIDANCE AND COUNSELLING</option>
+                            <option value="healtheducation">HEALTH EDUCATION</option>
+                            <option value="historyandstrategic">HISTORY AND STRATEGIC STUDIES</option>
+                            <option value="homeecons">HOME ECONOMICS AND EDUCATION</option>
+                            <option value="humankinetics">HUMAN KINETICS</option>
+                            <option value="igbo">IGBO</option>
+                            <option value="industrialchemistry">INDUSTRIAL CHEMISTRY</option>
+                            <option value="industrialmathematics">INDUSTRIAL MATHEMATICS</option>
+                            <option value="industrialrelations">INDUSTRIAL RELATIONS AND PERSONNEL MANAGEMENT</option>
+                            <option value="insurance">INSURANCE</option>
+                            <option value="islamic">ISLAMIC STUDIES</option>
+                            <option value="law">LAW</option>
+                            <option value="linguistics">LINGUISTICS, IGBO AND OTHER AFRICAN LANGUAGES</option>
+                            <option value="marinebiology">MARINE BIOLOGY</option>
+                            <option value="masscomm">MASS COMMUNICATION</option>
+                            <option value="mathematics">MATHEMATICS</option>
+                            <option value="mecheng">MECHANICAL ENGINEERING</option>
+                            <option value="medicallab">MEDICAL LABORATORY SCIENCE</option>
+                            <option value="medicine">MEDICINE AND SURGERY</option>
+                            <option value="metallurgical">METALLURGICAL AND MATERIAL ENGINEERING</option>
+                            <option value="meteorology">METEOROLOGY AND CLIMATE CHANGE</option>
+                            <option value="microbiology">MICROBIOLOGY</option>
+                            <option value="nursing">NURSING/NURSING SCIENCE</option>
+                            <option value="petroleumeng">PETROLEUM AND GAS ENGINEERING</option>
+                            <option value="pharmacology">PHARMACOLOGY</option>
+                            <option value="pharmacy">PHARMACY</option>
+                            <option value="philosophy">PHILOSOPHY</option>
+                            <option value="physics">PHYSICS</option>
+                            <option value="physiology">PHYSIOLOGY</option>
+                            <option value="physiotherapy">PHYSIOTHERAPY</option>
+                            <option value="politicalscience">POLITICAL SCIENCE</option>
+                            <option value="psychology">PSYCHOLOGY</option>
+                            <option value="quantitysurveying">QUANTITY SURVEYING</option>
+                            <option value="radiography">RADIOGRAPHY</option>
+                            <option value="russian">RUSSIAN</option>
+                            <option value="russianwithfrench">RUSSIAN WITH FRENCH/GERMAN</option>
+                            <option value="socialwork">SOCIAL WORK</option>
+                            <option value="sociology">SOCIOLOGY</option>
+                            <option value="statistics">STATISTICS</option>
+                            <option value="surveyingandgeoinformatics">SURVEYING AND GEOINFORMATICS</option>
+                            <option value="systemseng">SYSTEMS ENGINEERING</option>
+                            <option value="teacheredusci">TEACHER EDUCATION SCIENCE</option>
+                            <option value="technicaledu">TECHNICAL EDUCATION</option>
+                            <option value="urbanandregionalplanning">URBAN AND REGIONAL PLANNING</option>
+                            <option value="yoruba">YORUBA</option>
+                            <option value="zoology">ZOOLOGY</option>
+
                         </select>
                     </div>
 
-                    <div id="grade">
-                        <div id="mathematicssubject">
-                            <label for="maths">Mathematics</label>
-                            <select name="mathscourse" id="grade">
-                                <option value="a1">a1</option>
-                                <option value="a1">b2</option>
-                                <option value="a1">b3</option>
-                                <option value="a1">c4</option>
-                                <option value="a1">c5</option>
-                                <option value="a1">c6</option>
-                            </select>
-                        </div>
-                        <div id="englishsubject">
-                            <label for="eng">English</label>
-                            <select name="mathscourse" id="grade">
-                                <option value="a1">a1</option>
-                                <option value="a1">b2</option>
-                                <option value="a1">b3</option>
-                                <option value="a1">c4</option>
-                                <option value="a1">c5</option>
-                                <option value="a1">c6</option>
-                            </select>
+                    <div id="subjects">
+                        <div class="accountancy finance">
+                            <div id="mathematicssubject">
+                                <label for="maths">Mathematics</label>
+                                <select name="mathssubject" id="maths">
+                                    <option value="a1">a1</option>
+                                    <option value="a1">b2</option>
+                                    <option value="a1">b3</option>
+                                    <option value="a1">c4</option>
+                                    <option value="a1">c5</option>
+                                    <option value="a1">c6</option>
+                                </select>
+                            </div>
+                            <div id="englishsubject">
+                                <label for="eng">English</label>
+                                <select name="mathscourse" id="eng">
+                                    <option value="a1">a1</option>
+                                    <option value="a1">b2</option>
+                                    <option value="a1">b3</option>
+                                    <option value="a1">c4</option>
+                                    <option value="a1">c5</option>
+                                    <option value="a1">c6</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,7 +163,7 @@
     </div>
 
     <br>
-    <input type="submit" value="test" onclick="medicine()">
+    <input type="button" value="test" onclick="pharamacy()">
 
     <div class="aggregate-score">
         <div id="displayscore"></div>
