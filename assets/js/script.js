@@ -9,6 +9,18 @@ function calculate() {
     document.getElementById('displayscore').innerHTML = result;
 }
 
+const data = {
+    engineering: {
+      courses: [
+        "maths",
+        "eng",
+        "chem",
+        "phy"
+      ]
+    }
+  }
+
+
 function subject(sub) {
     if (sub.value === 'pharmacy') {
         function pharmacy();
