@@ -15,8 +15,18 @@ const data = {
         "maths",
         "eng",
         "chem",
-        "phy"
+        "phy",
+        "furthermaths"
       ]
+    }, 
+    medicine: {
+        courses: [
+            "maths",
+            "eng",
+            "chem",
+            "phy",
+            "biology"
+        ]
     }
   }
 
