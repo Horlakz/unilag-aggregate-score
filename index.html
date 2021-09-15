@@ -4,259 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Calculate Your Aggregate Score</title>
 </head>
 <body>
     <h1>Calculate your Aggregate Score</h1>
+    <p class="info">To see the requirements for your course, click here</p>
 
-    <div class="form-container">
-        <form action="">
-            <div>
+        <form action="" class="form-container">
+
+            <div id="jamb">
                 <label for="jambscore">Jamb Score: </label>
-                <input type="number" name="Jamb Score" id="jambscore" min="200" max="400" required>
+                <input type="number" name="Jamb Score" id="jambscore" min="200" max="400" required placeholder="Enter your Jamb Score">
             </div>
 
-            <div>
-                <div class="waec-result">
-                    <div id="coursesdiv">
-                        <label for="waecresult">Waec Result: </label><br>
-                        <label for="courses">Choose your course</label>
-                        <select name="course" id="coursesoption" onchange="subject(this)">
-                            <option value="accountancy">ACCOUNTANCY/ACCOUNTING</option>
-                            <option value="actuarial">ACTUARIAL SCIENCE</option>
-                            <option value="adulteducation">ADULT EDUCATION</option>
-                            <option value="architecture">ARCHITECTURE</option>
-                            <option value="bankingandfinance">BANKING AND FINANCE</option>
-                            <option value="biochemistry">BIOCHEMISTRY</option>
-                            <option value="biology">BIOLOGY</option>
-                            <option value="biomedicalengineering">BIOMEDICAL ENGINEERING</option>
-                            <option value="botany">BOTANY</option>
-                            <option value="building">BUILDING</option>
-                            <option value="businessadministration">BUSINESS ADMINISTRATION</option>
-                            <option value="businesseducation">BUSINESS EDUCATION</option>
-                            <option value="cellbiology">CELL BIOLOGY & GENETICS</option>
-                            <option value="chemistryengineery">CHEMICAL ENGINEERING</option>
-                            <option value="chemistry">CHEMISTRY</option>
-                            <option value="chinesestudies">CHINESE STUDIES</option>
-                            <option value="crs">CHRISTIAN RELIGIOUS STUDIES</option>
-                            <option value="civilengineering">CIVIL ENGINEERING</option>
-                            <option value="computerengineering">COMPUTER ENGINEERING</option>
-                            <option value="computerscience">COMPUTER SCIENCE</option>
-                            <option value="creativearts">CREATIVE ARTS</option>
-                            <option value="dentistryanddentalsurgery">DENTISTRY AND DENTAL SURGERY</option>
-                            <option value="earlychildhoodeducation">EARLY CHILDHOOD EDUCATION</option>
-                            <option value="economics">ECONOMICS</option>
-                            <option value="educationbiology">EDUCATION BIOLOGY</option>
-                            <option value="educationchemistry">EDUCATION CHEMISTRY</option>
-                            <option value="educationcrs">EDUCATION CHRISTIAN RELIGIOUS STUDIES</option>
-                            <option value="educationeconomics">EDUCATION ECONOMICS</option>
-                            <option value="educationenglish">EDUCATION ENGLISH LANGUAGE</option>
-                            <option value="educationfrench">EDUCATION FRENCH</option>
-                            <option value="educationgeography">EDUCATION GEOGRAPHY</option>
-                            <option value="educationhistory">EDUCATION HISTORY</option>
-                            <option value="educationigbo">EDUCATION IGBO</option>
-                            <option value="educationis">EDUCATION INTEGRATED SCIENCE</option>
-                            <option value="educationirs">EDUCATION ISLAMIC STUDIES</option>
-                            <option value="educationmathematics">EDUCATION MATHEMATICS</option>
-                            <option value="educationphysics">EDUCATION PHYSICS</option>
-                            <option value="educationyoruba">EDUCATION YORUBA</option>
-                            <option value="educationadministration">EDUCATIONAL ADMINISTRATION</option>
-                            <option value="electelect">ELECTRICAL/ELECTRONICS ENGINEERING</option>
-                            <option value="english">ENGLISH LANGUAGE</option>
-                            <option value="estatemanagement">ESTATE MANAGEMENT</option>
-                            <option value="finance">FINANCE</option>
-                            <option value="fishery">FISHERIES</option>
-                            <option value="fisherymanagement">FISHERIES MANAGEMENT</option>
-                            <option value="french">FRENCH</option>
-                            <option value="geography">GEOGRAPHY</option>
-                            <option value="geology">GEOLOGY</option>
-                            <option value="geophysics">GEOPHYSICS</option>
-                            <option value="guidanceandcounselling">GUIDANCE AND COUNSELLING</option>
-                            <option value="healtheducation">HEALTH EDUCATION</option>
-                            <option value="historyandstrategic">HISTORY AND STRATEGIC STUDIES</option>
-                            <option value="homeecons">HOME ECONOMICS AND EDUCATION</option>
-                            <option value="humankinetics">HUMAN KINETICS</option>
-                            <option value="igbo">IGBO</option>
-                            <option value="industrialchemistry">INDUSTRIAL CHEMISTRY</option>
-                            <option value="industrialmathematics">INDUSTRIAL MATHEMATICS</option>
-                            <option value="industrialrelations">INDUSTRIAL RELATIONS AND PERSONNEL MANAGEMENT</option>
-                            <option value="insurance">INSURANCE</option>
-                            <option value="islamic">ISLAMIC STUDIES</option>
-                            <option value="law">LAW</option>
-                            <option value="linguistics">LINGUISTICS, IGBO AND OTHER AFRICAN LANGUAGES</option>
-                            <option value="marinebiology">MARINE BIOLOGY</option>
-                            <option value="masscomm">MASS COMMUNICATION</option>
-                            <option value="mathematics">MATHEMATICS</option>
-                            <option value="mecheng">MECHANICAL ENGINEERING</option>
-                            <option value="medicallab">MEDICAL LABORATORY SCIENCE</option>
-                            <option value="medicine">MEDICINE AND SURGERY</option>
-                            <option value="metallurgical">METALLURGICAL AND MATERIAL ENGINEERING</option>
-                            <option value="meteorology">METEOROLOGY AND CLIMATE CHANGE</option>
-                            <option value="microbiology">MICROBIOLOGY</option>
-                            <option value="nursing">NURSING/NURSING SCIENCE</option>
-                            <option value="petroleumeng">PETROLEUM AND GAS ENGINEERING</option>
-                            <option value="pharmacology">PHARMACOLOGY</option>
-                            <option value="pharmacy">PHARMACY</option>
-                            <option value="philosophy">PHILOSOPHY</option>
-                            <option value="physics">PHYSICS</option>
-                            <option value="physiology">PHYSIOLOGY</option>
-                            <option value="physiotherapy">PHYSIOTHERAPY</option>
-                            <option value="politicalscience">POLITICAL SCIENCE</option>
-                            <option value="psychology">PSYCHOLOGY</option>
-                            <option value="quantitysurveying">QUANTITY SURVEYING</option>
-                            <option value="radiography">RADIOGRAPHY</option>
-                            <option value="russian">RUSSIAN</option>
-                            <option value="russianwithfrench">RUSSIAN WITH FRENCH/GERMAN</option>
-                            <option value="socialwork">SOCIAL WORK</option>
-                            <option value="sociology">SOCIOLOGY</option>
-                            <option value="statistics">STATISTICS</option>
-                            <option value="surveyingandgeoinformatics">SURVEYING AND GEOINFORMATICS</option>
-                            <option value="systemseng">SYSTEMS ENGINEERING</option>
-                            <option value="teacheredusci">TEACHER EDUCATION SCIENCE</option>
-                            <option value="technicaledu">TECHNICAL EDUCATION</option>
-                            <option value="urbanandregionalplanning">URBAN AND REGIONAL PLANNING</option>
-                            <option value="yoruba">YORUBA</option>
-                            <option value="zoology">ZOOLOGY</option>
-
+            <div id="o-level">
+                <label for="o-levelresult">O-Level Grade: </label>
+                <div id="waec-result">
+                    <div id="mathematics">
+                        <label for="mathematics">Mathematics: </label>
+                        <select name="maths-grade" id="mathematics-grade">
+                            <option value="a1">A1</option>
+                            <option value="b2">B2</option>
+                            <option value="b3">B3</option>
+                            <option value="c4">C4</option>
+                            <option value="c5">C5</option>
+                            <option value="c6">C6</option>
                         </select>
                     </div>
 
-                    <div id="subjects">
-                        <div class="biomedicalengineering">
-                            <div id="mathematicssubject">
-                                <label for="mathslab">Mathematics</label>
-                                <select name="mathssubject" id="maths">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="englishsubject">
-                                <label for="englab">English</label>
-                                <select name="engsub" id="eng">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="chemistrysubject">
-                                <label for="chemlab">Chemistry</label>
-                                <select name="chemsub" id="chem">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="physicssubject">
-                                <label for="phylab">Physics</label>
-                                <select name="physub" id="phy">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="biologysubject">
-                                <label for="biolab">Biology</label>
-                                <select name="biosub" id="bio">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="computerengineering">
-                            <div id="mathematicssubject">
-                                <label for="mathslab">Mathematics</label>
-                                <select name="mathssubject" id="maths">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="englishsubject">
-                                <label for="englab">English</label>
-                                <select name="engsub" id="eng">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="chemistrysubject">
-                                <label for="chemlab">Chemistry</label>
-                                <select name="chemsub" id="chem">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="physicssubject">
-                                <label for="phylab">Physics</label>
-                                <select name="physub" id="phy">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                            <div id="furthermathssubject">
-                                <label for="biolab">Further Mathematics</label>
-                                <select name="biosub" id="bio">
-                                    <option value="a1">a1</option>
-                                    <option value="b2">b2</option>
-                                    <option value="b3">b3</option>
-                                    <option value="c4">c4</option>
-                                    <option value="c5">c5</option>
-                                    <option value="c6">c6</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div id="english">
+                        <label for="english">English: </label>
+                        <select name="eng-grade" id="english-grade">
+                            <option value="a1">A1</option>
+                            <option value="b2">B2</option>
+                            <option value="b3">B3</option>
+                            <option value="c4">C4</option>
+                            <option value="c5">C5</option>
+                            <option value="c6">C6</option>
+                        </select>
                     </div>
+
+                    <div id="other">
+                        <label for="other">Other Subjects Offered: </label>
+                        <select name="other-grade" id="other-sub-grade">
+                            <option value="a1">A1</option>
+                            <option value="b2">B2</option>
+                            <option value="b3">B3</option>
+                            <option value="c4">C4</option>
+                            <option value="c5">C5</option>
+                            <option value="c6">C6</option>
+                        </select>
+                    </div>
+
+                    <div id="other">
+                        <label for="other">Other Subjects Offered: </label>
+                        <select name="other-grade" id="other-sub-grade">
+                            <option value="a1">A1</option>
+                            <option value="b2">B2</option>
+                            <option value="b3">B3</option>
+                            <option value="c4">C4</option>
+                            <option value="c5">C5</option>
+                            <option value="c6">C6</option>
+                        </select>
+                    </div>
+
+                    <div id="other">
+                        <label for="other">Other Subjects Offered: </label>
+                        <select name="other-grade" id="other-sub-grade">
+                            <option value="a1">A1</option>
+                            <option value="b2">B2</option>
+                            <option value="b3">B3</option>
+                            <option value="c4">C4</option>
+                            <option value="c5">C5</option>
+                            <option value="c6">C6</option>
+                        </select>
+                    </div>
+
                 </div>
             </div>
             
-            <div>
+            <div id="post-utme">
                 <label for="postutme">Post Utme Score: </label>
-                <input type="number" name="postutme" id="postutme" min="12" max="30"><br>
+                <input type="number" name="postutme" id="postutmescore" min="12" max="30" placeholder="Enter your post utme score">
             </div>
-            
-            <div>
-                <input type="button" value="Calculate" id="submit" onclick="calculate()">
-            </div>
-        </form>  
-    </div>
 
-    <div class="aggregate-score">
-        <div id="displayscore"></div>
-    </div>
+            <div id="btn-div">
+                <button class="btn" id="calculate">Calculate Aggregate Score</button>
+            </div>
+
+        </form>  
+
+        <div id="message">
+            <p>Your Aggregate Score is <span id="result">13.7</span></p>
+        </div>
     
+    <footer>Designed by <a href="#" target="_blank">Horlakz</a></footer>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>

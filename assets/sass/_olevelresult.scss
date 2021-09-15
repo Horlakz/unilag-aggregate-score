@@ -1,0 +1,24 @@
+#o-level {
+
+    #waec-result {
+        height: 8.999rem;
+        width: 100%;
+        padding: 0.4rem;
+        font-size: 0.98rem;
+
+        &>div {
+            display: flex;
+            justify-content: space-between;
+
+            select {
+                border: 1px solid grey;
+                font-size: .7rem;
+                margin: 0.009rem;
+            }
+
+            label {
+                text-transform: capitalize;
+            }
+        }
+    }
+}

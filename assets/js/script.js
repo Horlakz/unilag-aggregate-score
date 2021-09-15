@@ -1,48 +1,22 @@
+const calculateBtn = document.getElementById("calculate")
+const message = document.getElementById("message")
+const jambScore = document.getElementById("jambscore").value;
+const postUtmeScore = document.getElementById("postutmescore").value;
+
+
+// Event Listeners
+calculateBtn.addEventListener('click', calculate)
+
+// Calculte aggregate score
 function calculate() {
-    var jambScore = document.getElementById("jambscore").value;
-    var postUtmeScore = document.getElementById('postutme').value;
-    var result = (jambScore / 8) + parseInt(postUtmeScore, 10);
-    
-    console.log (result);
-    console.log (postUtmeScore);
+    let jambScoreResult = parseInt((jambScore / 8), 10)
+    // console.log(jambScoreResult + postUtmeScore)
 
-    document.getElementById('displayscore').innerHTML = result;
+    displayResult()
 }
 
-const data = {
-    engineering: {
-      courses: [
-        "maths",
-        "eng",
-        "chem",
-        "phy",
-        "furthermaths"
-      ]
-    }, 
-    medicine: {
-        courses: [
-            "maths",
-            "eng",
-            "chem",
-            "phy",
-            "biology"
-        ]
-    }
-  }
 
-
-function subject(sub) {
-    if (sub.value === 'pharmacy') {
-        function pharmacy();
-    } else if (sub.value === 'medicine') {
-        function medicine();
-    }
-}
-
-function pharmacy() {
-    document.getElementById('subjects').style.display = "inherit";
-}
-
-function medicine() {
-    document.getElementById('subjects').style.display = "inherit";
+function displayResult() {
+    message.style.display = "block";
+    calculateBtn.innerHTML = "Calculate again";
 }
