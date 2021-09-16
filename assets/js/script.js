@@ -2,7 +2,7 @@ const calculateBtn = document.querySelector("#calculate")
 const message = document.querySelector("#message")
 const jambScore = document.querySelector("#jambscore").value;
 const postUtmeScore = document.querySelector("#postutmescore").value;
-
+const inputData = document.getElementById("data-input")
 
 
 // Event Listeners
@@ -13,12 +13,17 @@ function calculate() {
     console.log(jambScore)
 
     // console.log(jambScoreResult + postUtmeScore)
-
+    
+    // refreshpage()
     displayResult()
 }
 
+function refreshpage() {
+    inputData.reset()
+}
 
 function displayResult() {
+    console.log(jambScore)
     message.style.display = "block";
-    calculateBtn.value = "Calculate again";
+    calculateBtn.innerHTML = "Calculate again";
 }
