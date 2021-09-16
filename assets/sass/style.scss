@@ -51,12 +51,14 @@ h1 {
 }
 
 
-.btn {
+.btn, input[type=submit] {
     height: 2rem;
     width: 100%;
     border: none;
+    cursor: pointer;
     background-color: $btn-color;
     font-size: 1.14rem;
+    font-weight: 600;
     padding: .4rem;
     transition: 0.5s;
 }

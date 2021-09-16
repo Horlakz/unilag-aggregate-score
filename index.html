@@ -14,16 +14,16 @@
         <form action="" class="form-container">
 
             <div id="jamb">
-                <label for="jambscore">Jamb Score: </label>
-                <input type="number" name="Jamb Score" id="jambscore" min="200" max="400" required placeholder="Enter your Jamb Score">
+                <label>Jamb Score: </label>
+                <input type="number" id="jambscore" min="200" max="400" required placeholder="Enter your Jamb Score">
             </div>
 
             <div id="o-level">
-                <label for="o-levelresult">O-Level Grade: </label>
+                <label>O-Level Grade: </label>
                 <div id="waec-result">
                     <div id="mathematics">
-                        <label for="mathematics">Mathematics: </label>
-                        <select name="maths-grade" id="mathematics-grade">
+                        <label>Mathematics: </label>
+                        <select id="mathematics-grade">
                             <option value="a1">A1</option>
                             <option value="b2">B2</option>
                             <option value="b3">B3</option>
@@ -34,8 +34,8 @@
                     </div>
 
                     <div id="english">
-                        <label for="english">English: </label>
-                        <select name="eng-grade" id="english-grade">
+                        <label>English: </label>
+                        <select id="english-grade">
                             <option value="a1">A1</option>
                             <option value="b2">B2</option>
                             <option value="b3">B3</option>
@@ -47,7 +47,7 @@
 
                     <div id="other">
                         <label for="other">Other Subjects Offered: </label>
-                        <select name="other-grade" id="other-sub-grade">
+                        <select id="other-sub-grade">
                             <option value="a1">A1</option>
                             <option value="b2">B2</option>
                             <option value="b3">B3</option>
@@ -58,8 +58,8 @@
                     </div>
 
                     <div id="other">
-                        <label for="other">Other Subjects Offered: </label>
-                        <select name="other-grade" id="other-sub-grade">
+                        <label>Other Subjects Offered: </label>
+                        <select id="other-sub-grade">
                             <option value="a1">A1</option>
                             <option value="b2">B2</option>
                             <option value="b3">B3</option>
@@ -70,8 +70,8 @@
                     </div>
 
                     <div id="other">
-                        <label for="other">Other Subjects Offered: </label>
-                        <select name="other-grade" id="other-sub-grade">
+                        <label>Other Subjects Offered: </label>
+                        <select id="other-sub-grade">
                             <option value="a1">A1</option>
                             <option value="b2">B2</option>
                             <option value="b3">B3</option>
@@ -85,12 +85,12 @@
             </div>
             
             <div id="post-utme">
-                <label for="postutme">Post Utme Score: </label>
-                <input type="number" name="postutme" id="postutmescore" min="12" max="30" placeholder="Enter your post utme score">
+                <label>Post Utme Score: </label>
+                <input type="number" id="postutmescore" min="12" max="30" placeholder="Enter your post utme score">
             </div>
 
             <div id="btn-div">
-                <button class="btn" id="calculate">Calculate Aggregate Score</button>
+                <input type="button" value="Calculate Your Aggregate" class="btn" id="calculate">
             </div>
 
         </form>  
