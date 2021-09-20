@@ -3,7 +3,7 @@ const message = document.querySelector("#message")
 const jambScore = document.querySelector("#jambscore").value;
 const postUtmeScore = document.querySelector("#postutmescore").value;
 const inputData = document.getElementById("data-input")
-
+const answer = documemt.getElementById("result")
 
 // Event Listeners
 calculateBtn.addEventListener('click', calculate)
@@ -16,6 +16,9 @@ function calculate() {
     // console.log(jambScoreResult + postUtmeScore)
     
     // refreshpage()
+    message.style.display = "block";
+    answer.innerText = avg;
+    calculateBtn.innerHTML = "Calculate again";
     displayResult()
 }
 
