@@ -10,7 +10,8 @@ calculateBtn.addEventListener('click', calculate)
 
 // Calculte aggregate score
 function calculate() {
-    console.log(jambScore)
+    const avg = ((jambScore / 8) + postUtmeScore)
+    console.log(avg)
 
     // console.log(jambScoreResult + postUtmeScore)
     
@@ -25,5 +26,6 @@ function refreshpage() {
 function displayResult() {
     console.log(jambScore)
     message.style.display = "block";
+    message.innerText = avg;
     calculateBtn.innerHTML = "Calculate again";
 }
