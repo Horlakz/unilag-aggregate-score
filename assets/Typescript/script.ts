@@ -32,6 +32,6 @@ function displayResult() {
     message.style.display ="block"
     calculateBtn.innerText = "Calculate Again"
     result.innerText = totalResult.toString()
-    // resetValues.click()
+    resetValues.click()
 
 }
