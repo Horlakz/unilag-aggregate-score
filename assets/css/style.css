@@ -111,6 +111,10 @@ h1 {
   transform: scale(0.9);
 }
 
+#reset-values {
+  display: none;
+}
+
 #message {
   display: none;
   font-size: 1.1rem;

@@ -1,34 +1,29 @@
-const calculateBtn = document.querySelector("#calculate")
-const message = document.querySelector("#message")
-const jambScore = document.querySelector("#jambscore").value;
-const postUtmeScore = document.querySelector("#postutmescore").value;
-const inputData = document.getElementById("data-input")
-const answer = documemt.getElementById("result")
-
-// Event Listeners
-calculateBtn.addEventListener('click', calculate)
-
-// Calculte aggregate score
-function calculate() {
-    const avg = ((jambScore / 8) + postUtmeScore)
-    console.log(avg)
-
-    // console.log(jambScoreResult + postUtmeScore)
-    
-    // refreshpage()
-    message.style.display = "block";
-    answer.innerText = avg;
-    calculateBtn.innerHTML = "Calculate again";
-    displayResult()
-}
-
-function refreshpage() {
-    inputData.reset()
-}
-
+"use strict";
+// COLLECTING RESOURCES
+const jambScore = parseInt(document.getElementById("jambscore").value, 10);
+const postUtmeScore = parseInt(document.getElementById("postutmescore").value, 10);
+const calculateBtn = document.getElementById("calculate");
+const message = document.getElementById("message");
+const result = document.getElementById("result");
+const resetValues = document.getElementById("reset-values");
+console.log(jambScore, postUtmeScore);
+// COLLECTING AND PROCESSING THE OPTIONS
+//collecting grades value
+const mathsGrade = parseInt(document.getElementById("mathematics-grade").value, 10);
+const engGrade = parseInt(document.getElementById("english-grade").value, 10);
+const otherSubGrades1 = parseInt(document.getElementById("other-sub-grade1").value, 10);
+const otherSubGrades2 = parseInt(document.getElementById("other-sub-grade2").value, 10);
+const otherSubGrades3 = parseInt(document.getElementById("other-sub-grade3").value, 10);
+const oLevelResult = mathsGrade + engGrade + otherSubGrades1 + otherSubGrades2 + otherSubGrades3;
+console.log(oLevelResult);
+// CALCULATOR FUNCTION
+const totalResult = (jambScore / 8) + postUtmeScore + oLevelResult;
+console.log(totalResult);
+// DISPLAYING THE RESULT
+calculateBtn.addEventListener('click', displayResult);
 function displayResult() {
-    console.log(jambScore)
     message.style.display = "block";
-    message.innerText = avg;
-    calculateBtn.innerHTML = "Calculate again";
+    calculateBtn.innerText = "Calculate Again";
+    result.innerText = totalResult.toString();
+    // resetValues.click()
 }
