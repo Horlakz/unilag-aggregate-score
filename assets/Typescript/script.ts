@@ -5,7 +5,7 @@ const jambScore:number = parseInt((<HTMLInputElement>document.getElementById("ja
 const postUtmeScore:number = parseInt((<HTMLInputElement>document.getElementById("postutmescore")).value, 10)
 const calculateBtn = document.getElementById("calculate")
 const message = document.getElementById("message")
-const result = document.getElementById("result")
+const result = (<HTMLInputElement>document.getElementById("result"))
 const resetValues = document.getElementById("reset-values")
 
 console.log (jambScore, postUtmeScore)
