@@ -65,7 +65,7 @@ function calculate_point() {
 
   let grade_scores, jambscore, postutmescore;
 
-  grade_scores = sum(mathematics, english, ...otherSubjects);
+  grade_scores = sum(mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3);
   jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
   postutmescore = to_int(document.querySelector(`#postutmescore`).value);
 
