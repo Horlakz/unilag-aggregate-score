@@ -48,9 +48,9 @@ function display(value) {
   // }
 }
 
-function errorMessage() {
-  noScore.innerText = "You have not inputed your scores"
-}
+// function errorMessage() {
+  // noScore.innerText = "You have not inputed your scores"
+// }
 
 function calculate_point() {
   const courses_grade_points = [];
