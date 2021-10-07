@@ -25,6 +25,7 @@
           max="400"
           required
           placeholder="Enter your Jamb Score"
+          onchange="calculate_point()"
         />
       </div>
 
@@ -34,7 +35,7 @@
         <div id="waec-result">
           <div id="mathematics">
             <label>Mathematics: </label>
-            <select id="mathematics-grade" required>
+            <select id="mathematics-grade" onchange="calculate_point()">
               <option value="A1">A1</option>
               <option value="B2">B2</option>
               <option value="B3">B3</option>
@@ -46,7 +47,7 @@
 
           <div id="english" required>
             <label>English: </label>
-            <select id="english-grade">
+            <select id="english-grade" onchange="calculate_point()">
               <option value="A1">A1</option>
               <option value="B2">B2</option>
               <option value="B3">B3</option>
@@ -56,9 +57,9 @@
             </select>
           </div>
 
-          <div id="chemistry" required>
-            <label>Chemistry: </label>
-            <select id="chemistry-grade">
+          <div id="other-subjects1" required>
+            <label>Other Subjects Offered: </label>
+            <select id="other-subjects-grade1" onchange="calculate_point()">
               <option value="A1">A1</option>
               <option value="B2">B2</option>
               <option value="B3">B3</option>
@@ -67,6 +68,31 @@
               <option value="C6">C6</option>
             </select>
           </div>
+
+          <div id="other-subjects2" required>
+            <label>Other Subjects Offererd: </label>
+            <select id="other-subjects-grade2" onchange="calculate_point()">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
+          <div id="other-subjects3" required>
+            <label>Other Subjects Offered: </label>
+            <select id="other-subjects-grade3" onchange="calculate_point()">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
         </div>
       </div>
 
@@ -78,7 +104,9 @@
           id="postutmescore"
           min="12"
           max="30"
+          maxlength="2"
           placeholder="Enter your post utme score"
+          onchange="calculate_point()"
           required
         />
       </div>
@@ -95,7 +123,7 @@
 
     <!-- TOTAL RESULT  -->
     <div id="message">
-      <p>Your Aggregate Score is <span id="result">13.7</span></p>
+      <p><span id="no-score">Your Aggregate Score is <span id="result">13.7</span></span></p>
     </div>
 
     <!-- FOOTER  -->

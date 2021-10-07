@@ -7,7 +7,9 @@ const grades = {
   C6: 2.2,
 };
 
-const courses_ids = ["mathematics-grade", "english-grade", "chemistry-grade"];
+const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"]
+
+const courses_ids = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
 
 function sum(...values) {
   var total = 0;
@@ -31,13 +33,23 @@ function display(value) {
   var display_container = document.querySelector("#message");
   var display_board = document.querySelector("#result");
   var display_button = document.querySelector("#calculate");
+  const noScore = document.querySelector('#no-score');
+  const resetValues = document.getElementById("reset-values");
+
 
   display_container.style.display = "block";
 
   if (value) {
     display_board.innerText = value;
     display_button.innerText = "Calculate again";
-  }
+    resetValues.click()
+  } // else {
+  //   errorMessage()
+  // }
+}
+
+function errorMessage() {
+  noScore.innerText = "You have not inputed your scores"
 }
 
 function calculate_point() {

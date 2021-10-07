@@ -1,0 +1,14 @@
+{
+    "liveSassCompile.settings.autoprefix": [],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format":"expanded", //compressed
+            // "extensionName": ".min.css",
+            "savePath": "assets/css",
+        }
+    ],
+}
