@@ -42,7 +42,7 @@ function display(value) {
   if (value) {
     display_board.innerText = value;
     display_button.innerText = "Calculate again";
-    resetValues.click()
+    // resetValues.click()
   } // else {
   //   errorMessage()
   // }
