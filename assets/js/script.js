@@ -4,7 +4,7 @@ const grades = {
   B3: 3.2,
   C4: 2.8,
   C5: 2.4,
-  C6: 2.2,
+  C6: 2.0,
 };
 
 const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"]
@@ -58,11 +58,14 @@ function calculate_point() {
     var grade = document.querySelector(`#${course}`).value;
     courses_grade_points.push(get_grade_point(grade));
   }
-  const [mathematics, english, chemistry] = courses_grade_points;
+
+  Let otherSubjects = [otherSubjects1, otherSubjects2, otherSubjects3]
+
+  const [mathematics, english, chemistry, ...otherSubjects] = courses_grade_points;
 
   let grade_scores, jambscore, postutmescore;
 
-  grade_scores = sum(mathematics, english, chemistry);
+  grade_scores = sum(mathematics, english, ... otherSubjects);
   jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
   postutmescore = to_int(document.querySelector(`#postutmescore`).value);
 
