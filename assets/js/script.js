@@ -1,46 +1,59 @@
-"use strict";
-// COLLECTING RESOURCES
-const jambScore = parseInt(document.getElementById("jambscore").value, 10);
-const postUtmeScore = parseInt(
-  document.getElementById("postutmescore").value,
-  10
-);
-const calculateBtn = document.getElementById("calculate");
-const message = document.getElementById("message");
+const grades = {
+  A1: 4,
+  B2: 3.6,
+  B3: 3.2,
+  C4: 2.8,
+  C5: 2.4,
+  C6: 2.2,
+};
 
-const resetValues = document.getElementById("reset-values");
-console.log(jambScore, postUtmeScore);
-// COLLECTING AND PROCESSING THE OPTIONS
-//collecting grades value
-const mathsGrade = parseInt(
-  document.getElementById("mathematics-grade").value,
-  10
-);
-const engGrade = parseInt(document.getElementById("english-grade").value, 10);
-const otherSubGrades1 = parseInt(
-  document.getElementById("other-sub-grade1").value,
-  10
-);
-const otherSubGrades2 = parseInt(
-  document.getElementById("other-sub-grade2").value,
-  10
-);
-const otherSubGrades3 = parseInt(
-  document.getElementById("other-sub-grade3").value,
-  10
-);
-const oLevelResult =
-  mathsGrade + engGrade + otherSubGrades1 + otherSubGrades2 + otherSubGrades3;
-console.log(oLevelResult);
-// CALCULATOR FUNCTION
-const totalResult = jambScore / 8 + postUtmeScore + oLevelResult;
-console.log(totalResult);
-// DISPLAYING THE RESULT
-calculateBtn.addEventListener("click", displayResult);
-function displayResult() {
-  const result = document.getElementById("result");
-  message.style.display = "block";
-  calculateBtn.innerText = "Calculate Again";
-  result.innerText = totalResult.toString();
-  resetValues.click();
+const courses_ids = ["mathematics-grade", "english-grade", "chemistry-grade"];
+
+function sum(...values) {
+  var total = 0;
+
+  for (const value of values) {
+    total += value;
+  }
+
+  return total;
+}
+
+function to_int(value) {
+  return Number.parseInt(value);
+}
+
+function get_grade_point(grade) {
+  return grades[grade];
+}
+
+function display(value) {
+  var display_container = document.querySelector("#message");
+  var display_board = document.querySelector("#result");
+  var display_button = document.querySelector("#calculate");
+
+  display_container.style.display = "block";
+
+  if (value) {
+    display_board.innerText = value;
+    display_button.innerText = "Calculate again";
+  }
+}
+
+function calculate_point() {
+  const courses_grade_points = [];
+  for (const course of courses_ids) {
+    var grade = document.querySelector(`#${course}`).value;
+    courses_grade_points.push(get_grade_point(grade));
+  }
+  const [mathematics, english, chemistry] = courses_grade_points;
+
+  let grade_scores, jambscore, postutmescore;
+
+  grade_scores = sum(mathematics, english, chemistry);
+  jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
+  postutmescore = to_int(document.querySelector(`#postutmescore`).value);
+
+  var total_score = sum(grade_scores, jambscore, postutmescore);
+  display(total_score);
 }
