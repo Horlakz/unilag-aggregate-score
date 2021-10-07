@@ -7,7 +7,7 @@ const postUtmeScore = parseInt(
 );
 const calculateBtn = document.getElementById("calculate");
 const message = document.getElementById("message");
-const result = document.getElementById("result");
+
 const resetValues = document.getElementById("reset-values");
 console.log(jambScore, postUtmeScore);
 // COLLECTING AND PROCESSING THE OPTIONS
@@ -38,6 +38,7 @@ console.log(totalResult);
 // DISPLAYING THE RESULT
 calculateBtn.addEventListener("click", displayResult);
 function displayResult() {
+  const result = document.getElementById("result");
   message.style.display = "block";
   calculateBtn.innerText = "Calculate Again";
   result.innerText = totalResult.toString();
