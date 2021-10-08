@@ -7,6 +7,7 @@ const grades = {
   C6: 2.0,
 };
 
+
 const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"]
 
 const courses_ids = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
