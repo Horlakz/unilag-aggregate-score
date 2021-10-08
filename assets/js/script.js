@@ -8,8 +8,17 @@ const grades = {
     C5: 2.4,
     C6: 2
 };
+<<<<<<< HEAD
 const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"];
 const coursesIds = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
+=======
+
+
+const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"]
+
+const courses_ids = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
+
+>>>>>>> 51dbac8e4b9bde487e5b6b64c3e470f24cea360e
 function sum(...values) {
     var total = 0;
     for (const value of values) {
