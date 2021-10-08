@@ -67,6 +67,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 5rem;
+  overflow: hidden;
 }
 
 @media (max-width: 550px) {
@@ -92,7 +93,7 @@ h1 {
     margin-bottom: 2.5rem;
   }
 }
-.btn, input[type=submit], .btn-button {
+.btn, input[type=submit] {
   height: 2rem;
   width: 100%;
   border: none;

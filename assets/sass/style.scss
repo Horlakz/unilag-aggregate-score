@@ -25,6 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-bottom: $footer-height;
+    overflow: hidden;
 }
 
 @media (max-width:550px) {
