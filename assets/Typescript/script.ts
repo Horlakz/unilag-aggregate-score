@@ -1,4 +1,4 @@
-export {};
+// export {};
 
 const grades: any = {
 	A1: 4,

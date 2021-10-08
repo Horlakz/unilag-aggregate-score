@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+// export {};
 const grades = {
     A1: 4,
     B2: 3.6,
