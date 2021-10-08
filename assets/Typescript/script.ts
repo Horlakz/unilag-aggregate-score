@@ -1,37 +1,74 @@
+export {};
 
+const grades: object = {
+	A1: 4,
+	B2: 3.6,
+	B3: 3.2,
+	C4: 2.8,
+	C5: 2.4,
+	C6: 2
+};
 
-// COLLECTING RESOURCES
-const jambScore:number = parseInt((<HTMLInputElement>document.getElementById("jambscore"))!.value, 10)
-const postUtmeScore:number = parseInt((<HTMLInputElement>document.getElementById("postutmescore")).value, 10)
-const calculateBtn = document.getElementById("calculate")
-const message = document.getElementById("message")
-const result = (<HTMLInputElement>document.getElementById("result"))
-const resetValues = document.getElementById("reset-values")
+const otherSubjectsGrades: string[] = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"];
 
-console.log (jambScore, postUtmeScore)
+const coursesIds = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
 
-// COLLECTING AND PROCESSING THE OPTIONS
-//collecting grades value
-const mathsGrade:number = parseInt((<HTMLInputElement>document.getElementById("mathematics-grade"))!.value, 10)
-const engGrade:number = parseInt((<HTMLInputElement>document.getElementById("english-grade")!).value, 10)
-const otherSubGrades1:number = parseInt((<HTMLInputElement>document.getElementById("other-sub-grade1"))!.value, 10)
-const otherSubGrades2:number = parseInt((<HTMLInputElement>document.getElementById("other-sub-grade2"))!.value, 10)
-const otherSubGrades3:number = parseInt((<HTMLInputElement>document.getElementById("other-sub-grade3"))!.value, 10)
+function sum(...values:[]) : number {
+	var total = 0;
 
-const oLevelResult:number = mathsGrade + engGrade + otherSubGrades1 + otherSubGrades2 + otherSubGrades3
-console.log (oLevelResult)
+	for (const value of values) {
+		total += value;
+	}
 
-// CALCULATOR FUNCTION
-const totalResult:number = (jambScore/8) + postUtmeScore + oLevelResult
-console.log (totalResult)
-
-// DISPLAYING THE RESULT
-calculateBtn.addEventListener('click', displayResult)
-
-function displayResult() {
-    message.style.display ="block"
-    calculateBtn.innerText = "Calculate Again"
-    result.innerText = totalResult.toString()
-    resetValues.click()
-
+	return total;
 }
+
+function to_int(value: string):number {
+    return Number.parseInt(value);
+  }
+  
+  function get_grade_point(grade:any):number {
+    return grades[grade];
+  }
+  
+  function display(value:number) {
+    var display_container:any = document.querySelector("#message");
+    var display_board : any = document.querySelector("#result");
+    var display_button : any = document.querySelector("#calculate");
+    const noScore = document.querySelector('#no-score');
+    const resetValues = document.getElementById("reset-values");
+  
+    display_container.style!.display = "block";
+  
+    if (value) {
+      display_board.innerText = value;
+      display_button!.innerText = "Calculate again";
+      // resetValues.click()
+    } // else {
+    //   errorMessage()
+    // }
+  }
+  
+  // function errorMessage() {
+    // noScore.innerText = "You have not inputed your scores"
+  // }
+  
+  function calculate_point() {
+    const courses_grade_points = [];
+    for (const course of coursesIds) {
+      var grade:number = parseInt((<HTMLElement>document.querySelector(`#${course}`)).value, 10);
+      courses_grade_points.push(get_grade_point(grade));
+    }
+    
+    const [mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3] = courses_grade_points;
+  
+
+    let grade_scores:number, jambscore:number, postutmescore:number;
+  
+    grade_scores = sum(mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3);
+    jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
+    postutmescore = to_int(document.querySelector(`#postutmescore`).value);
+  
+    var total_score:number = sum(grade_scores, jambscore, postutmescore);
+    display(total_score);
+  }
