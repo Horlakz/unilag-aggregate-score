@@ -1,6 +1,6 @@
 export {};
 
-const grades: object = {
+const grades: any = {
 	A1: 4,
 	B2: 3.6,
 	B3: 3.2,
@@ -13,7 +13,7 @@ const otherSubjectsGrades: string[] = ["other-subjects-grade1", "other-subjects-
 
 const coursesIds = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
 
-function sum(...values:[]) : number {
+function sum(...values:number[]) : number {
 	var total = 0;
 
 	for (const value of values) {
@@ -44,19 +44,12 @@ function to_int(value: string):number {
       display_board.innerText = value;
       display_button!.innerText = "Calculate again";
       // resetValues.click()
-    } // else {
-    //   errorMessage()
-    // }
-  }
-  
-  // function errorMessage() {
-    // noScore.innerText = "You have not inputed your scores"
-  // }
+    } 
   
   function calculate_point() {
     const courses_grade_points = [];
     for (const course of coursesIds) {
-      var grade:number = parseInt((<HTMLElement>document.querySelector(`#${course}`)).value, 10);
+      var grade:number = parseInt((document.querySelector(`#${course}`) as HTMLInputElement).value, 10);
       courses_grade_points.push(get_grade_point(grade));
     }
     
@@ -66,9 +59,10 @@ function to_int(value: string):number {
     let grade_scores:number, jambscore:number, postutmescore:number;
   
     grade_scores = sum(mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3);
-    jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
-    postutmescore = to_int(document.querySelector(`#postutmescore`).value);
+    jambscore = to_int((<HTMLInputElement>document.querySelector(`#jambscore`)).value) / 8;
+    postutmescore = to_int((<HTMLInputElement>document.querySelector(`#postutmescore`)).value);
   
     var total_score:number = sum(grade_scores, jambscore, postutmescore);
     display(total_score);
   }
+}

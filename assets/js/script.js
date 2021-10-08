@@ -8,17 +8,8 @@ const grades = {
     C5: 2.4,
     C6: 2
 };
-<<<<<<< HEAD
 const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"];
 const coursesIds = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
-=======
-
-
-const otherSubjectsGrades = ["other-subjects-grade1", "other-subjects-grade2", "other-subjects-grade3"]
-
-const courses_ids = ["mathematics-grade", "english-grade", ...otherSubjectsGrades];
-
->>>>>>> 51dbac8e4b9bde487e5b6b64c3e470f24cea360e
 function sum(...values) {
     var total = 0;
     for (const value of values) {
@@ -43,24 +34,19 @@ function display(value) {
         display_board.innerText = value;
         display_button.innerText = "Calculate again";
         // resetValues.click()
-    } // else {
-    //   errorMessage()
-    // }
-}
-// function errorMessage() {
-// noScore.innerText = "You have not inputed your scores"
-// }
-function calculate_point() {
-    const courses_grade_points = [];
-    for (const course of coursesIds) {
-        var grade = parseInt(document.querySelector(`#${course}`).value, 10);
-        courses_grade_points.push(get_grade_point(grade));
     }
-    const [mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3] = courses_grade_points;
-    let grade_scores, jambscore, postutmescore;
-    grade_scores = sum(mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3);
-    jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
-    postutmescore = to_int(document.querySelector(`#postutmescore`).value);
-    var total_score = sum(grade_scores, jambscore, postutmescore);
-    display(total_score);
+    function calculate_point() {
+        const courses_grade_points = [];
+        for (const course of coursesIds) {
+            var grade = parseInt(document.querySelector(`#${course}`).value, 10);
+            courses_grade_points.push(get_grade_point(grade));
+        }
+        const [mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3] = courses_grade_points;
+        let grade_scores, jambscore, postutmescore;
+        grade_scores = sum(mathematics, english, otherSubjects1, otherSubjects2, otherSubjects3);
+        jambscore = to_int(document.querySelector(`#jambscore`).value) / 8;
+        postutmescore = to_int(document.querySelector(`#postutmescore`).value);
+        var total_score = sum(grade_scores, jambscore, postutmescore);
+        display(total_score);
+    }
 }
