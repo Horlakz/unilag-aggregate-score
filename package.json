@@ -1,0 +1,27 @@
+{
+  "name": "unilag-aggregate-score",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horlakz/unilag-aggregate-score.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Horlakz/unilag-aggregate-score/issues"
+  },
+  "homepage": "https://github.com/Horlakz/unilag-aggregate-score#readme",
+  "dependencies": {
+    "-": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

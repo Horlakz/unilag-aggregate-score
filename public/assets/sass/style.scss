@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import "olevelresult.scss";
+@import "form-container.scss";
+
+// Variables
+$btn-color:rgb(110, 143, 204);
+$background-color: rgb(227, 233, 245);
+$footer-height: 5rem;
+
+// Global Styles
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient($background-color, rgb(171, 193, 235), rgb(166, 181, 215));
+    // background-repeat: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: $footer-height;
+    overflow: hidden;
+}
+
+@media (max-width:550px) {
+    body{
+        font-size: .85rem;
+    }
+}
+
+h1 {
+    margin-bottom: 0.3rem;
+    color: darken($btn-color, 12%);
+}
+
+.info {
+    margin-bottom: 4rem;
+}
+
+@media (max-width:550px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+.btn, input[type=submit] {
+    height: 2rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: $btn-color;
+    font-size: 1.14rem;
+    font-weight: 600;
+    padding: .4rem;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: darken($btn-color, 5%);
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+#reset-values{
+    display: none;
+}
+
+#message {
+    display: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+}
+
+#result {
+    color: rgb(26, 110, 26);
+}
+
+footer {
+    width: 100vw;
+    // position: relative;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    // padding: 1em 3em;
+
+    p {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: $footer-height;
+        padding: 1em 3em;
+        overflow: hidden;
+    }
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}

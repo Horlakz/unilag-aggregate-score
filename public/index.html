@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Calculate Your Aggregate Score</title>
+  </head>
+
+  <body>
+    <!-- heading -->
+    <h1>Calculate your Aggregate Score</h1>
+    <p class="info">To see the requirements for your course, click here</p>
+
+    <!-- FORM CONTAINER  -->
+    <form class="form-container" id="data-input">
+      <!-- JAMB RESULT-->
+      <div id="jamb">
+        <label>Jamb Score: </label>
+        <input
+          type="number"
+          id="jambscore"
+          min="200"
+          max="400"
+          required
+          placeholder="Enter your Jamb Score"
+        />
+      </div>
+
+      <!-- O-LEVEL RESULT -->
+      <div id="o-level">
+        <label>O-Level Grade: </label>
+        <div id="waec-result">
+          <div id="mathematics">
+            <label>Mathematics: </label>
+            <select id="mathematics-grade">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
+          <div id="english" required>
+            <label>English: </label>
+            <select id="english-grade">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
+          <div id="other-subjects1" required>
+            <label>Other Subjects Offered: </label>
+            <select id="other-subjects-grade1">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
+          <div id="other-subjects2" required>
+            <label>Other Subjects Offererd: </label>
+            <select id="other-subjects-grade2">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
+          <div id="other-subjects3" required>
+            <label>Other Subjects Offered: </label>
+            <select id="other-subjects-grade3">
+              <option value="A1">A1</option>
+              <option value="B2">B2</option>
+              <option value="B3">B3</option>
+              <option value="C4">C4</option>
+              <option value="C5">C5</option>
+              <option value="C6">C6</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- POST-UTME RESULT  -->
+      <div id="post-utme">
+        <label>Post Utme Score: </label>
+        <input
+          type="number"
+          id="postutmescore"
+          min="12"
+          max="30"
+          maxlength="2"
+          placeholder="Enter your post utme score"
+          required
+        />
+      </div>
+
+      <!-- CALCULATOR BUTTON  -->
+      <div id="btn-div">
+        <button type="button" class="btn" id="calculate">
+          Calculate Your Aggregate
+        </button>
+      </div>
+
+      <input type="reset" id="reset-values">
+    </form>
+
+    <!-- TOTAL RESULT  -->
+    <div id="message">
+      <p>Your Aggregate Score is <span id="result">13.7</span></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer><p>Designed by <a href="#" target="_blank">Horlakz</a></p></footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

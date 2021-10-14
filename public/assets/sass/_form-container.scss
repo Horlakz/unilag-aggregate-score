@@ -1,0 +1,43 @@
+.form-container {
+    // border: 1px solid rgb(173, 173, 173);
+    padding: 0.1rem;
+    
+    &>div {
+        margin: .7rem;
+        padding: 0.6rem;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            padding-bottom: .5rem;
+            width: 14rem;
+            text-transform: uppercase;
+        }
+
+        input {
+            height: 1.9rem;
+            width: 100%;
+            border: 0.001rem solid rgba(0, 0, 0, 0.212);
+            padding: 0.4rem;
+            font-size: 0.9rem;
+
+            &:focus, &:active {
+                outline: none;
+            }
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #777;
+        }
+    }
+
+
+}
+
+@media (min-width: 550px) {
+    .form-container {
+        &>div {
+            flex-direction: row;
+        }
+    }
+}
